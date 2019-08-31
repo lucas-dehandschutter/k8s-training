@@ -17,3 +17,5 @@ spec:
           image: wordpress:php7.1
           ports:
             - containerPort: 80
+      nodeSelector:
+        storageType: ssd
