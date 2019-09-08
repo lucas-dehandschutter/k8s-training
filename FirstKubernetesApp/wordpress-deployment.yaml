@@ -21,6 +21,7 @@ spec:
   selector:
     matchLabels:
       app: wordpress
+      tier: frontend
   replicas: 1
   template:
     metadata:
