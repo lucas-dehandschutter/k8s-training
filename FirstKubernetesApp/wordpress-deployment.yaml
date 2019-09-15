@@ -36,7 +36,10 @@ spec:
             - name: WORDPRESS_DB_HOST
               value: mysql-service
             - name: WORDPRESS_DB_PASSWORD
-              value: PASSWORDS_IN_PLAIN_TEXT_ARE_BAD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-pass
+                  key: password
           ports:
            - containerPort: 80
       nodeSelector:
